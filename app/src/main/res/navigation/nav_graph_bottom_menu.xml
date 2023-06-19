@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_event">
+
+    <fragment
+        android:id="@+id/navigation_event"
+        android:name="com.jalloft.eventmaster.ui.fragments.EventsFragment"
+        android:label="@string/action_menu_events"
+        tools:layout="@layout/fragment_events" />
+
+    <fragment
+        android:id="@+id/navigation_lecture"
+        android:name="com.jalloft.eventmaster.ui.fragments.LectureFragment"
+        android:label="@string/action_menu_lecture"
+        tools:layout="@layout/fragment_lecture" />
+
+    <fragment
+        android:id="@+id/navigation_room"
+        android:name="com.jalloft.eventmaster.ui.fragments.RoomFragment"
+        android:label="@string/action_menu_room"
+        tools:layout="@layout/fragment_room" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.jalloft.eventmaster.ui.fragments.SearchFragment"
+        android:label="@string/action_menu_search"
+        tools:layout="@layout/fragment_search" />
+
+
+</navigation>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    android:clipToPadding="true"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp"
+    app:contentPadding="16dp"
+    tools:cardBackgroundColor="#C128B2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/event_title"
+            style="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:ems="9"
+            app:lineHeight="24sp"
+            android:maxLength="35"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Feira de Livros e Literatura" />
+
+        <TextView
+            android:id="@+id/event_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2 de junho de 2023 em "
+            android:textColor="@color/item_white_transparent_2"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            app:layout_constraintStart_toStartOf="@id/event_title"
+            app:layout_constraintBottom_toTopOf="@id/event_address" />
+
+        <TextView
+            android:id="@+id/event_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Av. Centenário, 270 - Aeroporto"
+            android:textColor="@color/white"
+            android:ellipsize="marquee"
+            android:ems="9"
+            app:lineHeight="16sp"
+            android:maxLength="35"
+            android:maxLines="2"
+            style="@style/TextAppearance.Material3.TitleSmall"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/event_title" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="80dp"
+            app:tint="@color/item_white_transparent"
+            android:layout_height="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_event_item"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

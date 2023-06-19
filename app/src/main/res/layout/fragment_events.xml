@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.EventsFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_events"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:itemCount="0"
+        tools:listitem="@layout/item_events" />
+
+    <include
+        android:id="@+id/include_empty_layout"
+        layout="@layout/empty_list_layout" />
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/btn_add_events"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:src="@drawable/round_add_24"-->
+<!--        app:backgroundTint="@color/my_light_primary"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/guideline"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:tint="@color/white"-->
+<!--        tools:ignore="ContentDescription" />-->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="?attr/actionBarSize" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/rv_events"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rv_events"
+        app:trackCornerRadius="100dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

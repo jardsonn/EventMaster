@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/empty_illustration"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".4"
+        app:srcCompat="@drawable/illustration_festivities" />
+
+    <TextView
+        android:id="@+id/text_empty_list"
+        style="@style/TextAppearance.Material3.BodyLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/nenhum_evento_cadastrado"
+        android:textColor="@color/normal_text_color"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/empty_illustration" />
+<!--
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_first_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastrar_evento"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_empty_list"
+        app:layout_constraintVertical_bias=".2" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

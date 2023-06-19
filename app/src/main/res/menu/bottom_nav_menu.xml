@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigation_event"
+        android:icon="@drawable/ic_event"
+        app:showAsAction="always"
+        android:title="@string/action_menu_events" />
+    <item
+        android:id="@+id/navigation_lecture"
+        android:icon="@drawable/ic_speeches"
+        app:showAsAction="always"
+        android:title="@string/action_menu_lecture" />
+    <item
+        android:id="@+id/navigation_room"
+        android:icon="@drawable/ic_room"
+        app:showAsAction="always"
+        android:title="@string/action_menu_room" />
+     <item
+        android:id="@+id/navigation_search"
+         app:showAsAction="always"
+         android:icon="@drawable/ic_search"
+        android:title="@string/action_menu_search" />
+
+</menu>

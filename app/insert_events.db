@@ -1,0 +1,38 @@
+INSERT INTO eventos (nome, data, local)
+VALUES
+  ('Conferência WebTech', '2023-03-15', 'São Francisco, EUA'),
+  ('Cúpula de Segurança Cibernética', '2023-04-22', 'Londres, Reino Unido'),
+  ('Expo de IA', '2023-05-02', 'Tóquio, Japão'),
+  ('Simpósio de Computação em Nuvem', '2023-06-08', 'Sydney, Austrália'),
+  ('Summit de Desenvolvimento de Aplicativos Móveis', '2023-07-17', 'Nova York, EUA'),
+  ('Summit de Ciência de Dados', '2023-08-25', 'Berlim, Alemanha'),
+  ('Fórum de E-commerce', '2023-09-05', 'Paris, França'),
+  ('Congresso de Blockchain', '2023-10-14', 'Dubai, Emirados Árabes Unidos'),
+  ('Conferência de DevOps', '2023-11-23', 'São Paulo, Brasil'),
+  ('Expo de Infraestrutura de TI', '2024-01-02', 'Bangalore, Índia'),
+  ('Summit de Design de UX', '2024-02-11', 'Cidade do Cabo, África do Sul'),
+  ('Congresso Mundial de IoT', '2024-03-20', 'Barcelona, Espanha'),
+  ('Conferência de Testes de Software', '2024-05-12', 'Moscou, Rússia'),
+  ('Workshop de Segurança Cibernética', '2024-06-21', 'Singapura'),
+  ('Expo de Startups de Tecnologia', '2024-07-02', 'São Francisco, EUA'),
+  ('Seminário de Computação em Nuvem', '2024-09-21', 'Sydney, Austrália'),
+  ('Conferência de Inovação em Apps Móveis', '2024-10-30', 'Nova York, EUA'),
+
+
+  -- Inserir salas relacionadas aos eventos
+  INSERT INTO salas (eventoId, nome, capacidadeMaxima)
+  SELECT
+    eventos.id,
+    CONCAT('Sala ', salas.numero),
+    FLOOR(RAND() * 50) + 1 -- Capacidade máxima entre 1 e 50
+  FROM
+    eventos
+  JOIN
+    (SELECT 1 AS numero UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5) AS salas
+  WHERE
+    eventos.id BETWEEN 1 AND 20;
+
+--    Transformar data em long
+    UPDATE eventosÉ
+    SET data = CAST(strftime('%s', data) AS INTEGER) * 1000
+    WHERE id NOT IN (1, 2, 3);

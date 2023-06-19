@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_main_options">
+
+    <fragment
+        android:id="@+id/navigation_main_options"
+        android:name="com.jalloft.eventmaster.ui.fragments.MainOptionsFragment"
+        tools:layout="@layout/fragment_main_options">
+        <action
+            android:id="@+id/action_navigation_main_options_to_navigation_new_event"
+            app:destination="@id/navigation_new_event" />
+        <action
+            android:id="@+id/action_navigation_main_options_to_navigation_new_lecture"
+            app:destination="@id/navigation_new_lecture" />
+        <action
+            android:id="@+id/action_navigation_main_options_to_navigation_show_event"
+            app:destination="@id/navigation_show_event" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_new_event"
+        android:name="com.jalloft.eventmaster.ui.fragments.NewEventFragment"
+        tools:layout="@layout/fragment_new_event" />
+    <fragment
+        android:id="@+id/navigation_new_lecture"
+        android:name="com.jalloft.eventmaster.ui.fragments.NewLectureFragment"
+        tools:layout="@layout/fragment_new_lecture" />
+
+    <fragment
+        android:id="@+id/navigation_show_event"
+        android:name="com.jalloft.eventmaster.ui.fragments.ShowEventFragment"
+        tools:layout="@layout/fragment_show_event">
+
+        <argument android:name="currentEventId"
+            android:defaultValue="-1L"
+            app:argType="long"/>
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    android:clipToPadding="true"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/lecture_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/events_lecture_bg" />
+
+        <TextView
+            android:id="@+id/text_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_extra_bold"
+            android:textFontWeight="800"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnusedAttribute"
+            tools:text="A revolução da inteligência artificia" />
+
+        <TextView
+            android:id="@+id/text_por"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/open_sans_extra_bold"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_titulo"
+            tools:ignore="UnusedAttribute"
+            android:text="@string/by_name" />
+
+        <TextView
+            android:id="@+id/text_palestante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_extra_bold"
+            android:textSize="16sp"
+            android:layout_marginStart="6dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/text_por"
+            app:layout_constraintTop_toBottomOf="@id/text_titulo"
+            tools:ignore="UnusedAttribute"
+            tools:text="@string/tools_text_by" />
+
+
+        <TextView
+            android:id="@+id/text_evento_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/open_sans_extra_bold"
+            android:text="@string/evento"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/text_evento_name"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/text_evento_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/open_sans_extra_bold"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/text_evento_data_realizacao"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="UnusedAttribute"
+            tools:text="Conferência de Testes de Software" />
+
+        <TextView
+            android:id="@+id/text_evento_data_realizacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/open_sans_extra_bold"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="UnusedAttribute"
+            tools:text="02 de junho de 2023 das 20:00 as 22:30" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

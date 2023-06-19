@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_new_lecture"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:navigationIcon="@drawable/round_arrow_back_24"
+            app:title="@string/nova_palesta"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/TextAppearance.Toolbar"
+            app:titleTextColor="@color/normal_text_color" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/text_palestra_titulo"
+        style="@style/TextView.Jalloft.Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar" />
+
+    <EditText
+        android:id="@+id/edit_palestra_titulo"
+        style="@style/TextView.Jalloft.Field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_edittext"
+        android:hint="@string/digite_o_titulo_da_palestra"
+        android:importantForAutofill="no"
+        android:inputType="textCapWords"
+        app:layout_constraintTop_toBottomOf="@id/text_palestra_titulo" />
+
+    <TextView
+        android:id="@+id/text_palestra_nome_palestrante"
+        style="@style/TextView.Jalloft.Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/palestrante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_palestra_titulo" />
+
+    <EditText
+        android:id="@+id/edit_palestra_nome_palestrante"
+        style="@style/TextView.Jalloft.Field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_edittext"
+        android:hint="@string/digite_o_nome_do_palestrante"
+        android:importantForAutofill="no"
+        android:inputType="textCapWords"
+        app:layout_constraintTop_toBottomOf="@id/text_palestra_nome_palestrante" />
+
+    <TextView
+        android:id="@+id/text_palestra_evento"
+        style="@style/TextView.Jalloft.Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/evento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_palestra_nome_palestrante" />
+
+    <FrameLayout
+        android:id="@+id/spinner_palestra_evento_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_edittext"
+        app:layout_constraintTop_toBottomOf="@id/text_palestra_evento">
+
+        <Spinner
+            android:id="@+id/spinner_palestra_evento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_palestra_sala"
+        style="@style/TextView.Jalloft.Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/sala"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_palestra_evento_container" />
+
+    <FrameLayout
+        android:id="@+id/spinner_palestra_sala_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_edittext"
+        app:layout_constraintTop_toBottomOf="@id/text_palestra_sala">
+
+        <Spinner
+            android:id="@+id/spinner_palestra_sala"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_palestra_horario"
+        style="@style/TextView.Jalloft.Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/horario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_palestra_sala_container" />
+
+    <TextView
+        android:id="@+id/text_palestra_horario_dia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_edittext"
+        android:padding="12dp"
+        android:enabled="false"
+        app:layout_constraintEnd_toStartOf="@id/text_palestra_horario_hora"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_palestra_horario"
+        android:text="@string/nao_definido"
+        tools:text="24 de jan 2000" />
+
+    <TextView
+        android:id="@+id/text_palestra_horario_hora"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_edittext"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/_00_00"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_palestra_horario" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_salvar_palestra"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/cadastrar_palestra"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_palestra_horario_hora"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/btn_salvar_palestra"
+        app:layout_constraintEnd_toEndOf="@id/btn_salvar_palestra"
+        app:layout_constraintStart_toStartOf="@id/btn_salvar_palestra"
+        app:layout_constraintTop_toTopOf="@id/btn_salvar_palestra"
+        app:trackCornerRadius="100dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

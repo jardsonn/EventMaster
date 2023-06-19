@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/normal_text_color</item>
+    </style>
+
+    <style name="AppearanceActive.BottomNavigation" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/open_sans_bold</item>
+    </style>
+
+    <style name="AppearanceInactive.BottomNavigation" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/open_sans_bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextAppearance.Toolbar" parent="TextAppearance.Material3.ActionBar.Title">
+        <item name="fontFamily">@font/open_sans_extra_bold</item>
+    </style>
+
+     <style name="TextAppearance.Toolbar.Show" parent="TextAppearance.Toolbar">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+
+    <style name="ThemeOverlay.App.MaterialCalendar" parent="@style/ThemeOverlay.Material3.MaterialCalendar">
+        <item name="colorPrimary">@color/normal_text_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent
+        </item>
+    </style>
+
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">cut</item>
+    </style>
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="TextView.Jalloft.Label" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textColor">@color/normal_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView.Jalloft.Field" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">@color/normal_text_color</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:background">@drawable/shape_edittext</item>
+        <item name="android:importantForAutofill" tools:ignore="NewApi">no</item>
+    </style>
+
+
+</resources>

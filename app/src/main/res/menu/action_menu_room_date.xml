@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_menu_select_date"
+        android:icon="@drawable/round_calendar_month_24"
+        android:title="@string/action_menu_room_title"
+        android:iconTint="@color/normal_text_color"
+        app:showAsAction="always"
+        tools:ignore="UnusedAttribute" />
+</menu>
